@@ -1,0 +1,24 @@
+Package: hrbragg
+Type: Package
+Title: hrbragg title goes here otherwise CRAN checks fail
+Version: 0.1.0
+Date: 2021-02-16
+Authors@R: c(
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640"))
+  )
+Maintainer: Bob Rudis <bob@rud.is>
+Description: A good description goes here otherwise CRAN checks fail.
+URL: https://git.rud.is/hrbrmstr/hrbragg
+BugReports: https://git.rud.is/hrbrmstr/hrbragg/issues
+Encoding: UTF-8
+License: AGPL
+Suggests: 
+    covr, tinytest
+Depends: 
+    R (>= 3.5.0)
+Imports: 
+    httr,
+    jsonlite
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
