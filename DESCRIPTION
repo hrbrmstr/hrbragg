@@ -1,24 +1,43 @@
 Package: hrbragg
 Type: Package
-Title: hrbragg title goes here otherwise CRAN checks fail
+Title: Typography-centric Themes, Theme Components, and Utilities 
+    for 'ggplot2' and 'ragg'.
 Version: 0.1.0
 Date: 2021-02-16
 Authors@R: c(
-    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
-           comment = c(ORCID = "0000-0001-5670-2640"))
+    person(
+      given = "Bob", 
+      family = "Rudis", 
+      email = "bob@rud.is", 
+      role = c("aut", "cre", "cph"), 
+      comment = c(ORCID = "0000-0001-5670-2640")
+    )
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: The 'ragg', 'systemfonts', and 'textshaping' packages make it
+    possible to create plot components and themes that make full use of
+    the rich typography features in modern fonts. Fonts, themes, and utilities
+    are provided to create 'ggplot2' plots intended for rendering on 'ragg'
+    graphics devices.
 URL: https://git.rud.is/hrbrmstr/hrbragg
 BugReports: https://git.rud.is/hrbrmstr/hrbragg/issues
 Encoding: UTF-8
-License: AGPL
+Copyright: file inst/COPYRIGHTS
+License: MIT + file LICENSE
 Suggests: 
     covr, tinytest
 Depends: 
-    R (>= 3.5.0)
+    R (>= 3.6.0)
 Imports: 
-    httr,
-    jsonlite
+    ragg (>= 0.4.1),
+    systemfonts (>= 1.0.1), 
+    textshaping (>= 0.3.0),
+    ggplot2 (>= 3.3.2),
+    grid (>= 4.0.4),
+    grDevices,
+    scales (>= 1.1.1),
+    tools,
+    ggtext (>= 0.1.0),
+    rstudioapi
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1

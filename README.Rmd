@@ -7,6 +7,12 @@ editor_options:
 hrbrpkghelpr::global_opts()
 ```
 
+```{r ragg, echo = FALSE}
+knitr::opts_chunk$set(
+  dev = "ragg_png"
+)
+```
+
 ```{r badges, results='asis', echo=FALSE, cache=FALSE}
 hrbrpkghelpr::stinking_badges()
 ```
@@ -33,10 +39,76 @@ hrbrpkghelpr::install_block()
 
 ```{r lib-ex}
 library(hrbragg)
+library(ggplot2)
 
 # current version
 packageVersion("hrbragg")
 
+```
+
+For the moment, you'll need to install Inter:
+
+```{r install-font, eval = FALSE}
+install_inter()
+```
+
+```{r ex-00}
+str(inter_pkg, 1)
+```
+
+```{r ex-01}
+ggplot() +
+  geom_point(
+    data = mtcars,
+    aes(mpg, wt, color = factor(cyl))
+  ) +
+  geom_label(
+    aes(
+      x = 15, y = 5.48,
+      label = "<- A fairly useless annotation\n       that uses the custom Inter\n          variant by default."
+    ),
+    label.size = 0, hjust = 0, vjust = 1
+  ) +
+  labs(
+    x = "Fuel efficiency (mpg)", y = "Weight (tons)",
+    title = "Seminal ggplot2 scatterplot example",
+    subtitle = "A plot that is only useful for demonstration purposes",
+    caption = "Brought to you by the letter 'g'"
+  ) -> gg1
+```
+
+
+```{r dark-mode-01}
+gg1 + theme_inter(grid = "XY", mode = "dark") 
+```
+
+```{r light-mode-01}
+gg1 + theme_inter(grid = "XY", mode = "light") 
+```
+
+```{r ex-02}
+ggplot() +
+  geom_point(
+    data = mpg,
+    aes(displ, hwy, color = trans)
+  ) +
+  facet_wrap(
+    vars(cyl, drv), scales = "free", drop = TRUE
+  ) +
+  labs(
+    x = "Displacement", y = "Highway",
+    title = "Another seminal ggplot2 scatterplot example",
+    subtitle = "A plot that is only useful for demonstration purposes",
+    caption = "Brought to you by the letter 'g'"
+  ) -> gg2
+```
+
+```{r light-mode-02, fig.width=1400/96, fig.height=700/96}
+gg2 + theme_inter(grid = "XY", mode = "light") 
+```
+
+```{r dark-mode-02, fig.width=1400/96, fig.height=700/96}
+gg2 + theme_inter(grid = "XY", mode = "dark") 
 ```
 
 ## hrbragg Metrics
@@ -47,5 +119,4 @@ cloc::cloc_pkg_md()
 
 ## Code of Conduct
 
-Please note that this project is released with a Contributor Code of Conduct. 
-By participating in this project you agree to abide by its terms.
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.

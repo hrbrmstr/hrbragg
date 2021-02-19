@@ -4,9 +4,13 @@
 \name{hrbragg}
 \alias{hrbragg}
 \alias{hrbragg-package}
-\title{...}
+\title{Typography-centric Themes, Theme Components, and Utilities for 'ggplot2' and 'ragg'.}
 \description{
-A good description goes here otherwise CRAN checks fail.
+The 'ragg', 'systemfonts', and 'textshaping' packages make it
+possible to create plot components and themes that make full use of
+the rich typography features in modern fonts. Fonts, themes, and utilities
+are provided to create 'ggplot2' plots intended for rendering on 'ragg'
+graphics devices.
 }
 \seealso{
 Useful links:
