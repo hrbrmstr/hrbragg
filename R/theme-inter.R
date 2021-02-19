@@ -98,9 +98,9 @@ theme_inter <- function(
     update_geom_defaults(
       geom = get(geom),
       new = list(
-        arrow.fill = background_colour,
-        outlier.colour = foreground_colour,
-        outlier.fill = background_colour,
+        # arrow.fill = background_colour,
+        # outlier.colour = foreground_colour,
+        # outlier.fill = background_colour,
         colour = foreground_colour,
         fill = if (geom %in% c(has_reverse_cols)) background_colour else NA,
         family = base_family,
