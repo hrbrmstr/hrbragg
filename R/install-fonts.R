@@ -33,32 +33,38 @@ install_font <- function(family_name, sub_dir) {
 
 }
 
-# #' Install Goldman Sans (Condensed)
-# #'
-# #' Goldman Sans is a clean, modern typeface designed for dense data-rich
-# #' environments. From open letter shapes, enlarged x-height, and optical
-# #' balancing of individual letterforms, we designed Goldman Sans with
-# #' clarity in mind. Both normal and condensed versions are provided.
-# #'
-# #' @export
-# # install_goldman_sans <- function() {
-#   install_font("Goldman Sans (Condensed)", "goldman-sans")
-# }
+#' Install Goldman Sans (Condensed)
+#'
+#' Goldman Sans is a clean, modern typeface designed for dense data-rich
+#' environments. From open letter shapes, enlarged x-height, and optical
+#' balancing of individual letterforms, we designed Goldman Sans with
+#' clarity in mind. Both normal and condensed versions are provided.
+#'
+#' @export
+#' @note [Goldman Sans Restricted Font License](https://design.gs.com/d/legal/goldman-sans-license)
+#' @references [Goldman Sans](https://design.gs.com/d/story/goldman-sans/)
+#' @examples
+#' install_goldman_sans()
+install_goldman_sans <- function() {
+  install_font("Goldman Sans (Condensed)", "goldman-sans")
+}
 
-# #' Install Roboto Condensed
-# #'
-# #' Roboto has a dual nature. It has a mechanical skeleton and the forms are
-# #' largely geometric. At the same time, the font features friendly and open
-# #' curves. While some grotesks distort their letterforms to force a rigid rhythm,
-# #' Roboto doesn’t compromise, allowing letters to be settled into their natural
-# #' width. This makes for a more natural reading rhythm more commonly found in
-# #' humanist and serif types.
-# #'
-# #' @note [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)
-# #' @export
-# install_roboto_condensed <- function() {
-#   install_font("Roboto Condensed", "roboto-condensed")
-# }
+#' Install Roboto Condensed
+#'
+#' Roboto has a dual nature. It has a mechanical skeleton and the forms are
+#' largely geometric. At the same time, the font features friendly and open
+#' curves. While some grotesks distort their letterforms to force a rigid rhythm,
+#' Roboto doesn’t compromise, allowing letters to be settled into their natural
+#' width. This makes for a more natural reading rhythm more commonly found in
+#' humanist and serif types.
+#'
+#' @note [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)
+#' @export
+#' @examples
+#' install_roboto_condensed()
+install_roboto_condensed <- function() {
+  install_font("Roboto Condensed", "roboto-condensed")
+}
 
 #' Install Inter
 #'

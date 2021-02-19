@@ -30,7 +30,7 @@ Depends:
     R (>= 3.6.0)
 Imports: 
     ragg (>= 0.4.1),
-    systemfonts (>= 1.0.1), 
+    systemfonts (>= 1.0.1),
     textshaping (>= 0.3.0),
     ggplot2 (>= 3.3.2),
     grid (>= 4.0.4),
@@ -38,6 +38,7 @@ Imports:
     scales (>= 1.1.1),
     tools,
     ggtext (>= 0.1.0),
-    rstudioapi
+    rstudioapi,
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1

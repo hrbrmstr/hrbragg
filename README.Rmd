@@ -38,6 +38,7 @@ hrbrpkghelpr::install_block()
 ## Usage
 
 ```{r lib-ex}
+library(tibble)
 library(hrbragg)
 library(ggplot2)
 
@@ -52,9 +53,17 @@ For the moment, you'll need to install Inter:
 install_inter()
 ```
 
+### Inspect the definitions of the feature codes:
+
 ```{r ex-00}
 str(inter_pkg, 1)
+
+data("feature_dict")
+
+feature_dict[feature_dict$tag %in% textshaping::get_font_features("Inter")[[1]],]
 ```
+
+### Let's make a plot!
 
 ```{r ex-01}
 ggplot() +
@@ -77,14 +86,37 @@ ggplot() +
   ) -> gg1
 ```
 
+### Dark & light mode support with just a parameter change!
 
 ```{r dark-mode-01}
 gg1 + theme_inter(grid = "XY", mode = "dark") 
 ```
 
+Note the ligatures aren't as nice in Goldman Sans
+
+```{r dark-mode-01-rc}
+gg1 + theme_rc(grid = "XY", mode = "dark") 
+```
+
+### Note the ligatures aren't as nice in or Roboto Condensed
+
+```{r dark-mode-01-gs}
+gg1 + theme_gs(grid = "XY", mode = "dark") 
+```
+
 ```{r light-mode-01}
 gg1 + theme_inter(grid = "XY", mode = "light") 
 ```
+
+```{r light-mode-01-rc}
+gg1 + theme_rc(grid = "XY", mode = "light") 
+```
+
+```{r light-mode-01-gs}
+gg1 + theme_gs(grid = "XY", mode = "light") 
+```
+
+### Making sure we got all the various plot components styled
 
 ```{r ex-02}
 ggplot() +
@@ -109,6 +141,36 @@ gg2 + theme_inter(grid = "XY", mode = "light")
 
 ```{r dark-mode-02, fig.width=1400/96, fig.height=700/96}
 gg2 + theme_inter(grid = "XY", mode = "dark") 
+```
+
+### Here's a way to preview any variants you create:
+
+```{r preview-00, fig.width=600/96, fig.height=1300/96}
+preview_variant(inter_pkg)
+```
+
+```{r preview-01, fig.width=400/96, fig.height=300/96}
+reconfigure_font(
+  family = "Trattatello",
+  width = "normal",
+  ligatures = "discretionary",
+  calt = 1, tnum = 1, case = 1,
+  dlig = 1, kern = 1,
+  zero = 0, salt = 0
+) -> trat
+
+preview_variant(trat)
+```
+
+```{r preview-02, fig.width=600/96, fig.height=1100/96}
+reconfigure_font(
+  family = "Barlow",
+  width = "normal",
+  ligatures = "standard",
+  tnum = 1, kern = 1
+) -> barlow
+
+preview_variant(barlow)
 ```
 
 ## hrbragg Metrics

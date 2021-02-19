@@ -1,6 +1,6 @@
-#' ggplot2 Theme Based On The Inter Font Family
+#' ggplot2 Theme Based On The Roboto Condensed Font Family
 #'
-#' Uses the built-in [inter_pkg] custom font.
+#' Uses the built-in [rc_pkg] custom font.
 #'
 #' - `background_colour` dark mode is "`#121212`" else "`white`"
 #' - `foreground_colour` dark mode is "`#e1e1e1`" else "`#262626`"
@@ -52,8 +52,8 @@
 #'     subtitle = "A plot that is only useful for demonstration purposes",
 #'     caption = "Brought to you by the letter 'g'"
 #'   ) +
-#'   theme_inter(grid = "XY")
-theme_inter <- function(
+#'   theme_rc(grid = "XY")
+theme_rc <- function(
   base_size = 10,
   line_height = 0.875,
   plot_title_size = 18,
@@ -79,13 +79,13 @@ theme_inter <- function(
   axis = FALSE,
   ticks = FALSE) {
 
-  base_family <- inter_pkg$normal
-  plot_title_family <- inter_pkg$ultrabold
-  subtitle_family <- inter_pkg$medium
-  strip_text_family <- inter_pkg$semibold
-  axis_text_family <- inter_pkg$normal
-  caption_family <- inter_pkg$normal
-  axis_title_family <- inter_pkg$medium
+  base_family <- rc_pkg$normal
+  plot_title_family <- rc_pkg$bold
+  subtitle_family <- rc_pkg$normal
+  strip_text_family <- rc_pkg$bold
+  axis_text_family <- rc_pkg$normal
+  caption_family <- rc_pkg$normal_light
+  axis_title_family <- rc_pkg$bold
 
   c(
     "GeomRect", "GeomLabel", "GeomTile", "GeomViolin"

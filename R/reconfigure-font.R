@@ -80,8 +80,9 @@ reconfigure_font <- function(family, width = "normal",
     idx_nam <- as.character(fam$weight[idx])
     if (fam$italic[idx]) idx_nam <- sprintf("%s_italic", idx_nam)
     if (fam$monospace[idx]) idx_nam <- sprintf("%s_mono", idx_nam)
+    if (fam$style[idx] == "Light") idx_nam <- sprintf("%s_light", idx_nam)
 
-    ret[[idx_nam]] <- tmp_nam
+    (ret[[idx_nam]] <- tmp_nam)
 
     register_variant(
       name = tmp_nam,

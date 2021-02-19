@@ -1,6 +1,6 @@
-#' ggplot2 Theme Based On The Inter Font Family
+#' ggplot2 Theme Based On The Goldman Sans Font Family
 #'
-#' Uses the built-in [inter_pkg] custom font.
+#' Uses the built-in [gs_pkg] custom font.
 #'
 #' - `background_colour` dark mode is "`#121212`" else "`white`"
 #' - `foreground_colour` dark mode is "`#e1e1e1`" else "`#262626`"
@@ -52,9 +52,9 @@
 #'     subtitle = "A plot that is only useful for demonstration purposes",
 #'     caption = "Brought to you by the letter 'g'"
 #'   ) +
-#'   theme_inter(grid = "XY")
-theme_inter <- function(
-  base_size = 10,
+#'   theme_gs(grid = "XY")
+theme_gs <- function(
+  base_size = 11.5,
   line_height = 0.875,
   plot_title_size = 18,
   plot_title_position = "panel",
@@ -63,10 +63,10 @@ theme_inter <- function(
   subtitle_margin = 12,
   strip_text_size = 12,
   strip_placement = "outer",
-  caption_size = 9,
+  caption_size = 10,
   caption_margin = 10,
   axis_text_size = base_size,
-  axis_title_size = 9,
+  axis_title_size = 10,
   axis_title_just = "rt",
   panel_spacing = grid::unit(2, "lines"),
   plot_margin = margin(30, 30, 30, 30),
@@ -79,13 +79,13 @@ theme_inter <- function(
   axis = FALSE,
   ticks = FALSE) {
 
-  base_family <- inter_pkg$normal
-  plot_title_family <- inter_pkg$ultrabold
-  subtitle_family <- inter_pkg$medium
-  strip_text_family <- inter_pkg$semibold
-  axis_text_family <- inter_pkg$normal
-  caption_family <- inter_pkg$normal
-  axis_title_family <- inter_pkg$medium
+  base_family <- gsc_pkg$normal
+  plot_title_family <- gs_pkg$bold
+  subtitle_family <- gs_pkg$normal
+  strip_text_family <- gsc_pkg$bold
+  axis_text_family <- gsc_pkg$normal
+  caption_family <- gsc_pkg$normal
+  axis_title_family <- gs_pkg$medium
 
   c(
     "GeomRect", "GeomLabel", "GeomTile", "GeomViolin"
