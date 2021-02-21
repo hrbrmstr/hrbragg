@@ -3,32 +3,32 @@
 \docType{data}
 \name{rc_pkg}
 \alias{rc_pkg}
-\title{Robot Condensed Font Variant}
+\alias{rc_pkg_prop}
+\title{Roboto Condensed Font Variants}
 \format{
 A list
 }
-\usage{
-rc_pkg
-}
 \description{
-On load hrbragg creates a custom Roboto Condensed font family variant
-and makes it available in the global environment.
+On load hrbragg creates two custom Roboto Condensed font family variants:
+(\code{rc_pkg}, \code{rc_pkg_prop}) and makes them available in the global environment.
 }
 \details{
-The reconfigured family variant has the following features:
+The reconfigured family variants have the following features:
 \itemize{
 \item \code{ccmp} (\emph{Glyph Composition/Decomposition}): Either calls a ligature replacement
 on a sequence of characters or replaces a character with a sequence of glyphs.
 Provides logic that can for example effectively alter the order of input characters.
 \item \code{liga}/\code{ligatures} (\emph{Standard Ligatures}): Replaces (by default) sequence of characters with a single ligature glyph
 \item \code{kern} (\emph{Kerning}): Fine horizontal positioning of one glyph to the next, based on the shapes of the glyphs
-\item \code{tnum} (\emph{Tabular Figures}): Replaces numerals with glyphs of uniform width, often also lnum
 }
 
+They differ in that the \verb{_prop} variant does not have tabular numbers
+(\code{tnum}) enabled (which is more appropriate for titles and general
+annotations).
 Roboto Condensed
 \href{https://fonts.google.com/specimen/Roboto+Condensed}{font family preview/info}
 
-This object has the following names corresponding to individual,
+This objects have the following names corresponding to individual,
 customized font variants (ordered by font weight):
 \itemize{
 \item \code{normal_light}
@@ -37,4 +37,3 @@ customized font variants (ordered by font weight):
 \item \code{bold}
 }
 }
-\keyword{datasets}

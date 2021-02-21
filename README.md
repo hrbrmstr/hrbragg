@@ -36,14 +36,14 @@ The following functions are implemented:
 -   `elt`: Shortcut for element\_text
 -   `feature_dict`: OpenType feature description lookup table
 -   `gs_pkg`: Goldman Sans & Goldman Sans Condensed Font Variants
--   `install_goldman_sans`: Install Goldman Sans (Condensed)
+-   `install_goldman_sans`: Install Goldman Sans
 -   `install_inter`: Install Inter
 -   `install_roboto_condensed`: Install Roboto Condensed
--   `inter_pkg`: Inter Font Variant
+-   `inter_pkg`: Inter Font Variants
 -   `opentype_typographic_features`: OpenType Typographic Features
 -   `preview_variant`: Preview numbers, kerning, and ligatures from font
     variants you create
--   `rc_pkg`: Robot Condensed Font Variant
+-   `rc_pkg`: Roboto Condensed Font Variants
 -   `reconfigure_font`: Create an complete, alternate font family with
     the same customized features
 -   `reset_ggplot2_defaults`: Restore all ggplot2 geom to default
@@ -92,23 +92,23 @@ install_inter()
 ``` r
 str(inter_pkg, 1)
 ## List of 17
-##  $ ultralight_italic: chr "hrbragg-pkg Inter Thin Italic"
-##  $ ultralight       : chr "hrbragg-pkg Inter Thin"
-##  $ light            : chr "hrbragg-pkg Inter Extra Light"
-##  $ light_italic     : chr "hrbragg-pkg Inter Extra Light Italic"
-##  $ normal_italic    : chr "hrbragg-pkg Inter Light Italic"
-##  $ normal_light     : chr "hrbragg-pkg Inter Light"
-##  $ normal           : chr "hrbragg-pkg Inter Regular"
-##  $ medium_italic    : chr "hrbragg-pkg Inter Medium Italic"
-##  $ medium           : chr "hrbragg-pkg Inter Medium"
-##  $ semibold         : chr "hrbragg-pkg Inter Semi Bold"
-##  $ semibold_italic  : chr "hrbragg-pkg Inter Semi Bold Italic"
-##  $ bold             : chr "hrbragg-pkg Inter Bold"
-##  $ bold_italic      : chr "hrbragg-pkg Inter Bold Italic"
-##  $ ultrabold_italic : chr "hrbragg-pkg Inter Extra Bold Italic"
-##  $ ultrabold        : chr "hrbragg-pkg Inter Extra Bold"
-##  $ heavy_italic     : chr "hrbragg-pkg Inter Black Italic"
-##  $ heavy            : chr "hrbragg-pkg Inter Black"
+##  $ ultralight       : chr "hrbragg-pkg tab Inter Thin"
+##  $ ultralight_italic: chr "hrbragg-pkg tab Inter Thin Italic"
+##  $ light            : chr "hrbragg-pkg tab Inter Extra Light"
+##  $ light_italic     : chr "hrbragg-pkg tab Inter Extra Light Italic"
+##  $ normal_italic    : chr "hrbragg-pkg tab Inter Light Italic"
+##  $ normal           : chr "hrbragg-pkg tab Inter Regular"
+##  $ normal_light     : chr "hrbragg-pkg tab Inter Light"
+##  $ medium_italic    : chr "hrbragg-pkg tab Inter Medium Italic"
+##  $ medium           : chr "hrbragg-pkg tab Inter Medium"
+##  $ semibold_italic  : chr "hrbragg-pkg tab Inter Semi Bold Italic"
+##  $ semibold         : chr "hrbragg-pkg tab Inter Semi Bold"
+##  $ bold             : chr "hrbragg-pkg tab Inter Bold"
+##  $ bold_italic      : chr "hrbragg-pkg tab Inter Bold Italic"
+##  $ ultrabold        : chr "hrbragg-pkg tab Inter Extra Bold"
+##  $ ultrabold_italic : chr "hrbragg-pkg tab Inter Extra Bold Italic"
+##  $ heavy            : chr "hrbragg-pkg tab Inter Black"
+##  $ heavy_italic     : chr "hrbragg-pkg tab Inter Black Italic"
 ##  - attr(*, "family")= chr "Inter"
 
 data("feature_dict")
@@ -274,10 +274,10 @@ preview_variant(barlow)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|-----:|---------:|-----:|
-| SVG  |        1 | 0.02 | 2574 | 0.34 |           0 | 0.00 |        0 | 0.00 |
-| R    |       19 | 0.45 | 1131 | 0.15 |         215 | 0.42 |      642 | 0.45 |
-| Rmd  |        1 | 0.02 |   74 | 0.01 |          43 | 0.08 |       67 | 0.05 |
-| SUM  |       21 | 0.50 | 3779 | 0.50 |         258 | 0.50 |      709 | 0.50 |
+| SVG  |        1 | 0.02 | 2574 | 0.35 |           0 | 0.00 |        0 | 0.00 |
+| R    |       21 | 0.46 |  977 | 0.13 |         158 | 0.39 |      679 | 0.46 |
+| Rmd  |        1 | 0.02 |   75 | 0.01 |          43 | 0.11 |       67 | 0.04 |
+| SUM  |       23 | 0.50 | 3626 | 0.50 |         201 | 0.50 |      746 | 0.50 |
 
 clock Package Metrics for hrbragg
 

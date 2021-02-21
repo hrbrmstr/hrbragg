@@ -2,9 +2,12 @@
 % Please edit documentation in R/install-fonts.R
 \name{install_goldman_sans}
 \alias{install_goldman_sans}
-\title{Install Goldman Sans (Condensed)}
+\alias{install_goldman_sans_condensed}
+\title{Install Goldman Sans}
 \usage{
 install_goldman_sans()
+
+install_goldman_sans_condensed()
 }
 \description{
 Goldman Sans is a clean, modern typeface designed for dense data-rich
@@ -17,6 +20,7 @@ clarity in mind. Both normal and condensed versions are provided.
 }
 \examples{
 install_goldman_sans()
+install_goldman_sans_condensed()
 }
 \references{
 \href{https://design.gs.com/d/story/goldman-sans/}{Goldman Sans}

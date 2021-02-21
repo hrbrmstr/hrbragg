@@ -3,19 +3,18 @@
 \docType{data}
 \name{inter_pkg}
 \alias{inter_pkg}
-\title{Inter Font Variant}
+\alias{inter_pkg_prop}
+\title{Inter Font Variants}
 \format{
 A list
 }
-\usage{
-inter_pkg
-}
 \description{
-On load hrbragg creates a custom Inter font family variant
-and makes it available in the global environment.
+On load hrbragg creates two custom Inter font family variants:
+(\code{inter_pkg}, \code{inter_pkg_prop}) and makes them available in the
+global environment.
 }
 \details{
-The reconfigured family variant has the following features:
+The reconfigured family variants share the following features:
 \itemize{
 \item \code{calt}: (\emph{Contextual Alternates}): Applies a second substitution feature
 based on a match of a character pattern within a context of surrounding patterns
@@ -24,13 +23,16 @@ based on a match of a character pattern within a context of surrounding patterns
 \item \code{kern} (\emph{Kerning}): Fine horizontal positioning of one glyph to the next, based on the shapes of the glyphs
 \item \code{salt} (\emph{Stylistic Alternates}): \strong{DISABLED} — Either replaces with, or displays list of, stylistic alternatives for a character
 \item \code{ss01} (\emph{Stylistic set 1: Alternate digits}): An alternate style of digits.
-\item \code{tnum} (\emph{Tabular Figures}): Replaces numerals with glyphs of uniform width, often also lnum
 \item \code{zero} (\emph{Slashed Zero}): \strong{DISABLED} — Replaces 0 figure with slashed 0
 }
 
+They differ in that the \verb{_prop} variant does not have tabular numbers
+(\code{tnum}) enabled (which is more appropriate for titles and general
+annotations).
+
 Inter online documentation has \href{https://rsms.me/inter/#features}{specific descriptions and examples of these features}.
 
-This object has the following names corresponding to individual,
+The objects have the following names corresponding to individual,
 customized font variants (ordered by font weight):
 \itemize{
 \item \code{ultralight}
@@ -51,4 +53,3 @@ customized font variants (ordered by font weight):
 \item \code{heavy_italic}
 }
 }
-\keyword{datasets}

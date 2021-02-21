@@ -9,7 +9,8 @@ hrbrpkghelpr::global_opts()
 
 ```{r ragg, echo = FALSE}
 knitr::opts_chunk$set(
-  dev = "ragg_png"
+  dev = "ragg_png",
+  cache = TRUE
 )
 ```
 

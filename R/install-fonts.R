@@ -33,7 +33,7 @@ install_font <- function(family_name, sub_dir) {
 
 }
 
-#' Install Goldman Sans (Condensed)
+#' Install Goldman Sans
 #'
 #' Goldman Sans is a clean, modern typeface designed for dense data-rich
 #' environments. From open letter shapes, enlarged x-height, and optical
@@ -45,8 +45,15 @@ install_font <- function(family_name, sub_dir) {
 #' @references [Goldman Sans](https://design.gs.com/d/story/goldman-sans/)
 #' @examples
 #' install_goldman_sans()
+#' install_goldman_sans_condensed()
 install_goldman_sans <- function() {
-  install_font("Goldman Sans (Condensed)", "goldman-sans")
+  install_font("Goldman Sans", "goldman-sans")
+}
+
+#' @rdname install_goldman_sans
+#' @export
+install_goldman_sans_condensed <- function() {
+  install_font("Goldman Sans", "goldman-sans-condensed")
 }
 
 #' Install Roboto Condensed
