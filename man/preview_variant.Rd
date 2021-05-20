@@ -8,7 +8,7 @@ preview_variant(
   font_variant,
   font_size = 5,
  
-    test_label = "Lorem Ipsum dolor sit amet consectetur. => A\\u20dd\\n−0+1:2~3,456789\\n−9+8:7~6,543210"
+    test_label = "Lorem Ipsum dolor sit amet consectetur. => A⃝\\n−0+1:2~3,456789\\n−9+8:7~6,543210"
 )
 }
 \arguments{

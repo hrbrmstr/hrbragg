@@ -9,13 +9,13 @@ theme_inter(
   line_height = 0.875,
   plot_title_size = 18,
   plot_title_position = "panel",
-  plot_title_margin = 10,
+  plot_title_margin = 8,
   subtitle_size = 12,
-  subtitle_margin = 12,
+  subtitle_margin = 10,
   strip_text_size = 12,
   strip_placement = "outer",
   caption_size = 9,
-  caption_margin = 10,
+  caption_margin = 8,
   axis_text_size = base_size,
   axis_title_size = 9,
   axis_title_just = "rt",
@@ -28,6 +28,7 @@ theme_inter(
   axis_col = theme_foreground_color(mode, light = "#2b2b2b", dark = "#606367"),
   grid = TRUE,
   axis = FALSE,
+  axis_text = TRUE,
   ticks = FALSE
 )
 }
@@ -71,6 +72,8 @@ theme_inter(
 \item{grid}{grid}
 
 \item{axis}{axis}
+
+\item{axis_text}{axis text labels}
 
 \item{ticks}{ticks}
 

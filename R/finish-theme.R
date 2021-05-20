@@ -21,6 +21,7 @@ finish_theme <- function(base_size,
                          axis_col,
                          grid,
                          axis,
+                         axis_text = TRUE,
                          ticks,
                          base_family,
                          plot_title_family,
@@ -85,7 +86,10 @@ finish_theme <- function(base_size,
     }
 
   } else {
-    ret <- ret + theme(panel.grid = element_blank())
+    ret +
+      theme(
+        panel.grid = element_blank()
+      ) -> ret
   }
 
   if (inherits(axis, "character") | axis == TRUE) {
@@ -134,16 +138,32 @@ finish_theme <- function(base_size,
   xj <- switch(tolower(substr(axis_title_just, 1, 1)), b = 0, l = 0, m = 0.5, c = 0.5, r = 1, t = 1)
   yj <- switch(tolower(substr(axis_title_just, 2, 2)), b = 0, l = 0, m = 0.5, c = 0.5, r = 1, t = 1)
 
+  if (axis_text) {
+    ret +
+      theme(
+        axis.text.x = element_text(size = axis_text_size, margin = margin(t = 0), lineheight = line_height),
+        axis.text.x.top = element_text(size = axis_text_size, margin = margin(t = 0), lineheight = line_height),
+        axis.text.x.bottom = element_text(size = axis_text_size, margin = margin(t = 0), lineheight = line_height),
+
+        axis.text.y = element_text(size = axis_text_size, margin = margin(r = 0), lineheight = line_height),
+        axis.text.y.left = element_text(size = axis_text_size, margin = margin(r = 0), lineheight = line_height),
+        axis.text.y.right = element_text(size = axis_text_size, margin = margin(r = 0), lineheight = line_height)
+      ) -> ret
+  } else {
+    ret +
+      theme(
+        axis.text.x = element_blank(),
+        axis.text.x.top = element_blank(),
+        axis.text.x.bottom = element_blank(),
+
+        axis.text.y = element_blank(),
+        axis.text.y.left = element_blank(),
+        axis.text.y.right = element_blank(),
+      ) -> ret
+  }
+
   ret +
     theme(
-      axis.text.x = element_text(size = axis_text_size, margin = margin(t = 0), lineheight = line_height),
-      axis.text.x.top = element_text(size = axis_text_size, margin = margin(t = 0), lineheight = line_height),
-      axis.text.x.bottom = element_text(size = axis_text_size, margin = margin(t = 0), lineheight = line_height),
-
-      axis.text.y = element_text(size = axis_text_size, margin = margin(r = 0), lineheight = line_height),
-      axis.text.y.left = element_text(size = axis_text_size, margin = margin(r = 0), lineheight = line_height),
-      axis.text.y.right = element_text(size = axis_text_size, margin = margin(r = 0), lineheight = line_height),
-
       axis.title = element_text(
         size = axis_title_size,
         family = axis_title_family, lineheight = line_height

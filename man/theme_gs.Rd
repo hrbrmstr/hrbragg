@@ -28,6 +28,7 @@ theme_gs(
   axis_col = theme_foreground_color(mode, light = "#2b2b2b", dark = "#606367"),
   grid = TRUE,
   axis = FALSE,
+  axis_text = TRUE,
   ticks = FALSE
 )
 }
@@ -71,6 +72,8 @@ theme_gs(
 \item{grid}{grid}
 
 \item{axis}{axis}
+
+\item{axis_text}{axis text labels}
 
 \item{ticks}{ticks}
 

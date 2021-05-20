@@ -30,6 +30,7 @@
 #' @param grid grid
 #' @param axis_col axis col
 #' @param axis axis
+#' @param axis_text axis text labels
 #' @param ticks ticks
 #' @return ggplot2 theme
 #' @export
@@ -77,6 +78,7 @@ theme_rc <- function(
   axis_col = theme_foreground_color(mode, light = "#2b2b2b", dark = "#606367"),
   grid = TRUE,
   axis = FALSE,
+  axis_text = TRUE,
   ticks = FALSE) {
 
   base_family <- rc_pkg$normal
@@ -111,6 +113,7 @@ theme_rc <- function(
     axis_col = axis_col,
     grid = grid,
     axis = axis,
+    axis_text = axis_text,
     ticks = ticks,
     base_family = base_family,
     plot_title_family = plot_title_family,

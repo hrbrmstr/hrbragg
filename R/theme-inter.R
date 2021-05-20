@@ -30,6 +30,7 @@
 #' @param grid grid
 #' @param axis_col axis col
 #' @param axis axis
+#' @param axis_text axis text labels
 #' @param ticks ticks
 #' @return ggplot2 theme
 #' @export
@@ -58,13 +59,13 @@ theme_inter <- function(
   line_height = 0.875,
   plot_title_size = 18,
   plot_title_position = "panel",
-  plot_title_margin = 10,
+  plot_title_margin = 8,
   subtitle_size = 12,
-  subtitle_margin = 12,
+  subtitle_margin = 10,
   strip_text_size = 12,
   strip_placement = "outer",
   caption_size = 9,
-  caption_margin = 10,
+  caption_margin = 8,
   axis_text_size = base_size,
   axis_title_size = 9,
   axis_title_just = "rt",
@@ -77,6 +78,7 @@ theme_inter <- function(
   axis_col = theme_foreground_color(mode, light = "#2b2b2b", dark = "#606367"),
   grid = TRUE,
   axis = FALSE,
+  axis_text = TRUE,
   ticks = FALSE) {
 
   base_family <- inter_pkg$normal
@@ -111,6 +113,7 @@ theme_inter <- function(
     axis_col = axis_col,
     grid = grid,
     axis = axis,
+    axis_text = axis_text,
     ticks = ticks,
     base_family = base_family,
     plot_title_family = plot_title_family,
