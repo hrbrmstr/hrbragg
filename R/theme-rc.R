@@ -65,7 +65,7 @@ theme_rc <- function(
   strip_text_size = 12,
   strip_placement = "outer",
   caption_size = 9,
-  caption_margin = 10,
+  caption_margin = 12,
   axis_text_size = base_size,
   axis_title_size = 9,
   axis_title_just = "rt",

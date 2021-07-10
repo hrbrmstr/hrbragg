@@ -7,7 +7,9 @@ by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keyb
 ![Signed commit
 %](https://img.shields.io/badge/Signed_Commits-100%25-lightgrey.svg)
 [![Linux build
-Status](https://travis-ci.org/hrbrmstr/hrbragg.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbragg)  
+Status](https://travis-ci.org/hrbrmstr/hrbragg.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbragg)
+[![Coverage
+Status](https://codecov.io/gh/hrbrmstr/hrbragg/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbragg)
 ![Minimal R
 Version](https://img.shields.io/badge/R%3E%3D-3.6.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)

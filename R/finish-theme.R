@@ -166,43 +166,69 @@ finish_theme <- function(base_size,
     theme(
       axis.title = element_text(
         size = axis_title_size,
-        family = axis_title_family, lineheight = line_height
+        family = axis_title_family,
+        lineheight = line_height,
+        margin = margin(t = axis_title_size/2)
       ),
 
       axis.title.x = element_text(
         hjust = xj, size = axis_title_size,
-        family = axis_title_family, lineheight = line_height
+        family = axis_title_family,
+        lineheight = line_height
       ),
       axis.title.x.top = element_text(
-        hjust = xj, size = axis_title_size,
-        family = axis_title_family, lineheight = line_height
+        hjust = xj,
+        size = axis_title_size,
+        family = axis_title_family, lineheight = line_height,
+        margin = margin(b = axis_title_size/2)
       ),
       axis.title.x.bottom = element_text(
-        hjust = xj, size = axis_title_size,
-        family = axis_title_family, lineheight = line_height
+        hjust = xj,
+        size = axis_title_size,
+        family = axis_title_family,
+        lineheight = line_height,
+        margin = margin(t = axis_title_size/2)
       ),
 
       axis.title.y = element_text(
-        hjust = yj, size = axis_title_size,
-        family = axis_title_family, lineheight = line_height
+        hjust = yj,
+        size = axis_title_size,
+        family = axis_title_family,
+        lineheight = line_height,
+        margin = margin(r = axis_title_size/2)
       ),
       axis.title.y.left = element_text(
-        hjust = yj, size = axis_title_size,
-        family = axis_title_family, lineheight = line_height
+        hjust = yj,
+        size = axis_title_size,
+        family = axis_title_family,
+        lineheight = line_height,
+        margin = margin(r = axis_title_size/2)
       ),
       axis.title.y.right = element_text(
-        hjust = yj, size = axis_title_size, angle = 90,
-        family = axis_title_family, lineheight = line_height
+        hjust = yj,
+        size = axis_title_size,
+        angle = 90,
+        family = axis_title_family,
+        lineheight = line_height,
+        margin = margin(l = axis_title_size/2)
       ),
 
       strip.placement = strip_placement,
       strip.text = element_text(
-        hjust = 0, size = strip_text_size,  color = foreground_colour,
-        family = strip_text_family, lineheight = line_height
+        hjust = 0,
+        size = strip_text_size,
+        color = foreground_colour,
+        family = strip_text_family,
+        lineheight = line_height,
+        margin = margin(b = strip_text_size/2)
       ),
       strip.text.x = element_text(
-        hjust = 0, size = strip_text_size, color = foreground_colour,
-        family = strip_text_family, lineheight = line_height
+        hjust = 0,
+        size = strip_text_size,
+        color = foreground_colour,
+        family = strip_text_family,
+        lineheight = line_height,
+        margin = margin(b = strip_text_size/2)
       ),
       strip.background = element_rect(
         fill = background_colour, color = NA
@@ -214,25 +240,36 @@ finish_theme <- function(base_size,
         fill = background_colour, color = NA
       ),
       strip.text.y = element_text(
-        hjust = 0, size = strip_text_size, color = foreground_colour,
-        family = strip_text_family, lineheight = line_height
+        hjust = 0,
+        size = strip_text_size,
+        color = foreground_colour,
+        family = strip_text_family,
+        lineheight = line_height,
+        margin = margin(l = strip_text_size/2)
       ),
+
       panel.spacing = panel_spacing,
       panel.background = element_rect(color = NA, fill = background_colour),
+
       plot.background = element_rect(color = NA, fill = background_colour),
       plot.title.position = plot_title_position,
       plot.margin = plot_margin,
-      plot.title = element_text(
-        hjust = 0, size = plot_title_size, margin = margin(b = plot_title_margin),
+      plot.title = ggtext::element_textbox_simple(
+        hjust = 0, size = plot_title_size,
+        margin = margin(b = plot_title_margin),
         family = plot_title_family, lineheight = line_height
       ),
-      plot.subtitle = element_text(
-        hjust = 0, size = subtitle_size, margin = margin(b = subtitle_margin),
+      plot.subtitle = ggtext::element_textbox_simple(
+        hjust = 0, size = subtitle_size,
+        margin = margin(b = subtitle_margin),
         family = subtitle_family, lineheight = line_height
       ),
-      plot.caption = element_text(
-        hjust = 1, size = caption_size, margin = margin(t = caption_margin),
-        family = caption_family, lineheight = line_height
+      plot.caption = ggtext::element_textbox(
+        hjust = 1,
+        size = caption_size,
+        margin = margin(t = caption_margin),
+        family = caption_family,
+        lineheight = line_height
       ),
     ) -> ret
 
