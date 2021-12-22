@@ -2,8 +2,8 @@ Package: hrbragg
 Type: Package
 Title: Typography-centric Themes, Theme Components, and Utilities 
     for 'ggplot2' and 'ragg'.
-Version: 0.2.2
-Date: 2021-07-10
+Version: 0.3.0
+Date: 2021-12-22
 Authors@R: c(
     person(
       given = "Bob", 
@@ -41,4 +41,4 @@ Imports:
     rstudioapi,
     magrittr
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2

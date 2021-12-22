@@ -16,6 +16,7 @@ register_reconfig <- function(family,
                               inst_f,
                               font_dir,
                               width = "normal",
+                              has_tnum = TRUE,
                               ligatures = NULL,
                               letters = NULL,
                               numbers = NULL,
@@ -43,24 +44,41 @@ register_reconfig <- function(family,
 
   startup_msg("Registering '", family, "' font variant.")
 
-  reconfigure_font(
-    prefix = "hrbragg-pkg tab",
-    family = family,
-    width = width,
-    ligatures = ligatures,
-    tnum = 1, ...
-  ) -> has_tnum
+  if (has_tnum) {
+    reconfigure_font(
+      prefix = "hrbragg-pkg tab",
+      family = family,
+      width = width,
+      ligatures = ligatures,
+      tnum = 1,
+      ...
+    ) -> has_tnum
 
-  reconfigure_font(
-    prefix = "hrbragg-pkg prop",
-    family = family,
-    width = width,
-    ligatures = "discretionary",
-    tnum = 0, ...
-  ) -> no_tnum
+    reconfigure_font(
+      prefix = "hrbragg-pkg prop",
+      family = family,
+      width = width,
+      ligatures = "discretionary",
+      tnum = 0,
+      ...
+    ) -> no_tnum
 
-  assign(sprintf("%s_pkg", glob_prefix), has_tnum, .GlobalEnv)
-  assign(sprintf("%s_pkg_prop", glob_prefix), no_tnum, .GlobalEnv)
+    assign(sprintf("%s_pkg", glob_prefix), has_tnum, .GlobalEnv)
+    assign(sprintf("%s_pkg_prop", glob_prefix), no_tnum, .GlobalEnv)
+
+  } else {
+
+    reconfigure_font(
+      prefix = "hrbragg-pkg prop",
+      family = family,
+      width = width,
+      ligatures = "discretionary",
+      ...
+    ) -> no_tnum
+
+    assign(sprintf("%s_pkg", glob_prefix), no_tnum, .GlobalEnv)
+
+  }
 
 }
 
@@ -105,6 +123,27 @@ register_fonts <- function() {
     width = "semicondensed",
     ligatures = "standard",
     kern = 1
+  )
+
+  register_reconfig(
+    family = "Clear Sans",
+    glob_prefix = "clear_sans",
+    inst_f = "install_clear_sans()",
+    font_dir = "clear-sans",
+    width = "normal",
+    ligatures = "standard",
+    kern = 1,
+    has_tnum = FALSE
+  )
+
+  register_reconfig(
+    family = "Eau",
+    glob_prefix = "eau_sans",
+    inst_f = "install_eau_sans()",
+    font_dir = "eau-sans",
+    width = "normal",
+    ligatures = "standard",
+    has_tnum = FALSE
   )
 
   startup_msg(

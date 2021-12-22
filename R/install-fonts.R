@@ -50,6 +50,39 @@ install_goldman_sans <- function() {
   install_font("Goldman Sans", "goldman-sans")
 }
 
+#' Install Clear Sans
+#'
+#' Clear Sans has minimized, unambiguous characters and slightly narrow proportions, making it
+#' ideal for UI design. Its strong, recognizable forms avoid distracting ambiguity, making it
+#' comfortable for reading short UI labels and long passages in both screen and print.
+#'
+#' @export
+#' @note [Clear Sans Font License](https://github.com/intel/clear-sans/blob/main/LICENSE.txt)
+#' @references [Clean Sans](https://github.com/intel/clear-sans)
+#' @examples
+#' install_clean_sans()
+install_clean_sans <- function() {
+  install_font("Clean Sans", "clean-sans")
+}
+
+#' Install Eau Sans
+#'
+#' Eau Sans is (via the creator): "In 1992, I wanted to design a perfectly faceless typeface of my own.
+#' I chose Eau, meaning water in French, as the name. I planned to do two variations; a sanserif and
+#' a Roman serif style version. I could not decide on the design details for the Roman variation,
+#' so only the sanserif version was completed. Although I think that Eau Sans needs more refinement,
+#' present it here as it was originally designed. At the time of release, I re-formatted the Eau Sans
+#' family with numeric characters in three variations: proportional, lining and old-styled figures.
+#' This typeface is used for my electronic sound project: parabola."
+#'
+#' @export
+#' @references [Eau Sans](http://www.yoworks.com/eau/index.html)
+#' @examples
+#' install_clean_sans()
+install_clean_sans <- function() {
+  install_font("Eau Sans", "eau-sans")
+}
+
 #' @rdname install_goldman_sans
 #' @export
 install_goldman_sans_condensed <- function() {
