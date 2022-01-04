@@ -78,8 +78,8 @@ install_clean_sans <- function() {
 #' @export
 #' @references [Eau Sans](http://www.yoworks.com/eau/index.html)
 #' @examples
-#' install_clean_sans()
-install_clean_sans <- function() {
+#' install_eau_sans()
+install_eau_sans <- function() {
   install_font("Eau Sans", "eau-sans")
 }
 
