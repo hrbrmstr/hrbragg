@@ -58,11 +58,11 @@ install_goldman_sans <- function() {
 #'
 #' @export
 #' @note [Clear Sans Font License](https://github.com/intel/clear-sans/blob/main/LICENSE.txt)
-#' @references [Clean Sans](https://github.com/intel/clear-sans)
+#' @references [Clear Sans](https://github.com/intel/clear-sans)
 #' @examples
 #' install_clean_sans()
-install_clean_sans <- function() {
-  install_font("Clean Sans", "clean-sans")
+install_clear_sans <- function() {
+  install_font("Clear Sans", "clear-sans")
 }
 
 #' Install Eau Sans
